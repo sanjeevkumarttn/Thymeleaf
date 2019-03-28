@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Detail</title>
+    <style>
+        label{
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<center>
+<label>Name:</label> <h4 th:text="${name}"></h4>
+<label>Id:</label> <h4 th:text="${id}"></h4>
+<label>Email Id:</label> <h4 th:text="${email}"></h4>
+<label>competency:</label> <h4 th:text="${competency}"></h4>
+</center>
+</body>
+</html>

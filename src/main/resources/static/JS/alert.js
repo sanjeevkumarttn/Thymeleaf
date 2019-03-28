@@ -1,0 +1,3 @@
+function alertBox() {
+    alert("Clicked..")
+}

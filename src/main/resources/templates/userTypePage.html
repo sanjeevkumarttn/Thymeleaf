@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body th:with="isAdmin=${userType=='admin'}?'true':'false'">
+
+<div th:if="${isAdmin}">
+    <header th:insert="fragments/admin-header.html :: header"></header>       
+
+
+    <p>Welcome Admin..!</p>
+
+</div>
+
+<div th:unless="${isAdmin}">
+    <header th:insert="fragments/user-header.html :: header"></header>       
+
+    <p>Welcome User..!</p>
+</div>
+<footer th:insert="fragments/footer.html :: footer"></footer>       
+
+</body>
+</html>

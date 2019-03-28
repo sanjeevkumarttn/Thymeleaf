@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<script th:src="@{/JS/showSelectedValue.js}"></script>
+<body>
+<form name="form1">
+<label>Select user..</label>
+
+<select name="mySelectedValue" id="mySelectedValue" onchange="selectedValue()">
+    <option th:value="None">Select One</option>
+    <option th:each="user : ${T(com.spring.ThymeleafDemo.EnumUser).values()}"
+            th:value="${user.getValue()}" th:text="${user.getValue()}"></option>
+</select>
+</form>
+
+<p id="value" name="value"></p>
+</body>
+</html>
